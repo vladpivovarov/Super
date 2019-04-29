@@ -5,9 +5,5 @@ import "./js/style";
 import validation from "./js/validation";
 import ajax from "./js/ajax";
 
-
-
-
-
 validation();
 ajax();

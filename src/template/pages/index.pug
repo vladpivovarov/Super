@@ -13,13 +13,13 @@ block content
     main.main
         .container.main__container
             h2.subtitle.main__subtitle Основная информация
-            //.alert.main__alert
-            //    .alert__text
-            //        .alert__title Внимание!
-            //        .alert__desc Ваши данные сохранены в браузере, но не отправлены на сервер. Нажмите кнопку “Отправить”, чтобы завершить редактирование.
-            //    .alert__icon
-            //        svg.alert__svg
-            //            use(xlink:href="./assets/images/sprite.svg#svg--warn")
+            .alert.main__alert
+                .alert__text
+                    .alert__title Внимание!
+                    .alert__desc Ваши данные сохранены в браузере, но не отправлены на сервер. Нажмите кнопку “Отправить”, чтобы завершить редактирование.
+                .alert__icon
+                    svg.alert__svg
+                        use(xlink:href="./assets/images/sprite.svg#svg--warn")
 
 
             form(id="form").main__form

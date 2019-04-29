@@ -7,10 +7,12 @@ export default function () {
     var email = form["email"].value;
     var workGroupDesc = form["workGroupDesc"].value;
     var publicGroupDesc = form["publicGroupDesc"].value;
-    var groupName = form["groupName"];
+    var groupName = form["groupName"].value;
     var alias = form["alias"].value;
     var fullName = form["fullName"].value;
     var post = form["post"].value;
+    var alert = document.querySelector(".main__alert");
+    var subtitle = document.querySelector(".main__subtitle");
 
     var save = document.querySelector(".button_save");
 
@@ -141,11 +143,16 @@ export default function () {
         }
     }
 
+    if (localStorage.getItem("count")) {
+        alert.classList.add("main__alert_show");
+        subtitle.classList.add("main__subtitle_margin");
+    }
+
     form["phone"].value = localStorage.getItem("phone");
     form["email"].value = localStorage.getItem("email");
     form["workGroupDesc"].value = localStorage.getItem("workGroupDesc");
     form["publicGroupDesc"].value = localStorage.getItem("publicGroupDesc");
-    form["groupName"] = localStorage.getItem("groupName");
+    form["groupName"].value = localStorage.getItem("groupName");
     form["alias"].value = localStorage.getItem("alias");
     form["fullName"].value = localStorage.getItem("fullName");
     form["post"].value = localStorage.getItem("post");
@@ -163,6 +170,7 @@ export default function () {
             localStorage.setItem("alias", alias);
             localStorage.setItem("fullName", fullName);
             localStorage.setItem("post", post);
+            localStorage.setItem("count", "1");
     });
 
 

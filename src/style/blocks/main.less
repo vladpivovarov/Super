@@ -5,7 +5,7 @@
 
 .main__alert {
   position: absolute;
-  left: 0px;
+  left: -10000px;
   top: 0px + 32px + @title + 20px;
   z-index: 1;
 }
@@ -21,4 +21,16 @@
 
 .main__input.input_textarea {
   margin-top: -17px;
+}
+
+.main__alert_show {
+  left: 0px;
+}
+
+.main__subtitle {
+  transition: all .3s;
+}
+
+.main__subtitle_margin {
+  margin-bottom: 130px;
 }

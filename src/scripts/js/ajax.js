@@ -17,11 +17,10 @@ export default function () {
         e.preventDefault();
 
 
-        if (phone.value && email.value && workGroupDesc.value && publicGroupDesc.value && groupName.value && alias.value && fullName.value && post.value) {
+        if (phone.value && email.value && workGroupDesc.value && groupName.value && alias.value && fullName.value && post.value) {
             if (!phone.classList.contains("input_alert") &&
                 !email.classList.contains("input_alert") &&
                 !workGroupDesc.classList.contains("input_alert") &&
-                !publicGroupDesc.classList.contains("input_alert") &&
                 !groupName.classList.contains("input_alert") &&
                 !alias.classList.contains("input_alert") &&
                 !fullName.classList.contains("input_alert") &&
@@ -49,12 +48,12 @@ export default function () {
                     }
                 }
                 xhr.send(JSON.stringify(data));
-                console.log(data)
+                console.log(data);
 
                 form.reset();
 
             }else {
-                return;
+                return false;
             }
         }
 

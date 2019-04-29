@@ -20,13 +20,17 @@
       <main class="main">
         <div class="container main__container">
           <h2 class="subtitle main__subtitle">Основная информация</h2>
-          <!--.alert.main__alert-->
-          <!--    .alert__text-->
-          <!--        .alert__title Внимание!-->
-          <!--        .alert__desc Ваши данные сохранены в браузере, но не отправлены на сервер. Нажмите кнопку “Отправить”, чтобы завершить редактирование.-->
-          <!--    .alert__icon-->
-          <!--        svg.alert__svg-->
-          <!--            use(xlink:href="./assets/images/sprite.svg#svg--warn")-->
+          <div class="alert main__alert">
+            <div class="alert__text">
+              <div class="alert__title">Внимание!</div>
+              <div class="alert__desc">Ваши данные сохранены в браузере, но не отправлены на сервер. Нажмите кнопку “Отправить”, чтобы завершить редактирование.</div>
+            </div>
+            <div class="alert__icon">
+              <svg class="alert__svg">
+                <use xlink:href="./assets/images/sprite.svg#svg--warn"></use>
+              </svg>
+            </div>
+          </div>
           <form class="main__form" id="form">
             <label class="input main__input">
               <div class="input__title">Название группы</div>
