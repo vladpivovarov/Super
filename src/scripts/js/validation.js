@@ -1,16 +1,18 @@
 export default function () {
 
-    var form = document.querySelector(".main__form");
+    var form = document.getElementById("form");
     var inputs = document.querySelectorAll(".input__line");
 
     var phone = form["phone"].value;
     var email = form["email"].value;
     var workGroupDesc = form["workGroupDesc"].value;
     var publicGroupDesc = form["publicGroupDesc"].value;
-    var groupName = form["groupName"].value;
+    var groupName = form["groupName"];
     var alias = form["alias"].value;
     var fullName = form["fullName"].value;
     var post = form["post"].value;
+
+
 
     var save = document.querySelector(".button_save");
 
@@ -25,7 +27,16 @@ export default function () {
         inputs[i].addEventListener("blur", function(e) {
             label.classList.remove("input_focus");
 
-            if (phone && email && workGroupDesc && publicGroupDesc && groupName && alias && fullName && post) {
+            phone = form["phone"].value;
+            email = form["email"].value;
+            workGroupDesc = form["workGroupDesc"].value;
+            publicGroupDesc = form["publicGroupDesc"].value;
+            groupName = form["groupName"];
+            alias = form["alias"].value;
+            fullName = form["fullName"].value;
+            post = form["post"].value;
+
+            if (phone || email || workGroupDesc || publicGroupDesc || groupName || alias || fullName || post) {
                 save.removeAttribute("disabled");
             }
 
@@ -132,22 +143,20 @@ export default function () {
         }
     }
 
-    if (localStorage.getItem("phone")) {
-        phone = localStorage.getItem("phone");
-        email = localStorage.getItem("email");
-        workGroupDesc = localStorage.getItem("workGroupDesc");
-        publicGroupDesc = localStorage.getItem("publicGroupDesc");
-        groupName = localStorage.getItem("groupName");
-        alias = localStorage.getItem("alias");
-        fullName = localStorage.getItem("fullName");
-        post = localStorage.getItem("post");
-    }
+    form["phone"].value = localStorage.getItem("phone");
+    form["email"].value = localStorage.getItem("email");
+    form["workGroupDesc"].value = localStorage.getItem("workGroupDesc");
+    form["publicGroupDesc"].value = localStorage.getItem("publicGroupDesc");
+    form["groupName"] = localStorage.getItem("groupName");
+    form["alias"].value = localStorage.getItem("alias");
+    form["fullName"].value = localStorage.getItem("fullName");
+    form["post"].value = localStorage.getItem("post");
+
 
     save.addEventListener("click", function(e) {
-        e.preventDefault();
-
-
-        if (phone && email && workGroupDesc && publicGroupDesc && groupName && alias && fullName && post) {
+        if(save.hasAttribute("disabled")) {
+            return;
+        }
             localStorage.setItem("phone", phone);
             localStorage.setItem("email", email);
             localStorage.setItem("workGroupDesc", workGroupDesc);
@@ -156,9 +165,7 @@ export default function () {
             localStorage.setItem("alias", alias);
             localStorage.setItem("fullName", fullName);
             localStorage.setItem("post", post);
-        }
-
-    })
+    });
 
 
 
