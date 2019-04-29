@@ -168,6 +168,19 @@ export default function () {
     });
 
 
+    var checkbox = document.querySelector(".checkbox__input");
+    var textarea2 = document.getElementById("textarea2");
+
+    checkbox.onchange = function() {
+        console.log("hello");
+        if (checkbox.checked) {
+            textarea2.classList.add("input_show");
+        }else {
+            textarea2.classList.remove("input_show");
+        }
+    };
+
+
 
 
 }
