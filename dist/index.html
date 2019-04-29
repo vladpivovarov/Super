@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./assets/style/foundation.css"/>
+    <link rel="stylesheet" href="./assets/style/main.min.css"/>
+    <title>Super
+    </title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container header__container">
+          <h1 class="title header__title">Профиль рабочей группы</h1>
+          <p class="header__description">В данном разделе вы можете посмотреть и отредактировать информацию по своей рабочей группе, настроить права участников, расшарить настройки полностью или частично для других рабочих групп, а также сделать полную копию вашей рабочей группы с ограниченным доступом для тонкой настройки без публичных оповещений.</p>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container main__container">
+          <h2 class="subtitle main__subtitle">Основная информация</h2>
+          <!--.alert.main__alert-->
+          <!--    .alert__text-->
+          <!--        .alert__title Внимание!-->
+          <!--        .alert__desc Ваши данные сохранены в браузере, но не отправлены на сервер. Нажмите кнопку “Отправить”, чтобы завершить редактирование.-->
+          <!--    .alert__icon-->
+          <!--        svg.alert__svg-->
+          <!--            use(xlink:href="./assets/images/sprite.svg#svg--warn")-->
+          <form class="main__form" id="form">
+            <label class="input main__input">
+              <div class="input__title">Название группы</div>
+              <input class="input__line" type="text" placeholder="Введите название группы" name="groupName"/>
+              <div class="input__mess">Алиас не может содержать русские буквы и пробелы</div>
+            </label>
+            <label class="input main__input">
+              <div class="input__title">Алиас</div>
+              <input class="input__line" type="text" placeholder="Введите алиас" name="alias"/>
+              <div class="input__mess"></div>
+            </label>
+            <label class="input main__input">
+              <div class="input__title">Электронная почта для обращений</div>
+              <input class="input__line" type="text" placeholder="Введите электронную почту" name="email"/>
+              <div class="input__mess"></div>
+            </label>
+            <label class="input main__input">
+              <div class="input__title">Телефон представителя</div>
+              <input class="input__line" type="text" placeholder="+7 (XXX) XXX-XX-XX" name="phone"/>
+              <div class="input__mess"></div>
+            </label>
+            <label class="input main__input">
+              <div class="input__title">ФИО представителя</div>
+              <input class="input__line" type="text" placeholder="Введите полные данные представителя" name="fullName"/>
+              <div class="input__mess"></div>
+            </label>
+            <label class="input main__input">
+              <div class="input__title">Должность ответственного</div>
+              <input class="input__line" type="text" placeholder="Введите полное наименование должности" name="post"/>
+              <div class="input__mess"></div>
+            </label>
+            <label class="input main__input input_textarea">
+              <div class="input__title">Описание рабочей группы для внутреннего использования</div>
+              <textarea class="input__line input__area" placeholder="Введите краткое и емкое описание" name="workGroupDesc"></textarea>
+              <div class="input__mess"></div>
+            </label>
+            <label class="checkbox main__checkbox">
+              <input class="checkbox__input" type="checkbox" name="groupName"/>
+              <div class="checkbox__block">
+                <svg>
+                  <use xlink:href="./assets/images/sprite.svg#svg--check"></use>
+                </svg>
+              </div>
+              <div class="checkbox__desc">Публичное описание отличается от внутреннего</div>
+            </label>
+            <label class="input main__input input__checked input__hide input_textarea">
+              <div class="input__title">Публичное описание рабочей группы</div>
+              <textarea class="input__line input__area" placeholder="Введите краткое и емкое описание" name="publicGroupDesc"></textarea>
+              <div class="input__mess"></div>
+            </label>
+            <div class="controls main__controls">
+              <div class="controls__left">
+                <input class="button button_submit controls__button" type="submit" value="Отправить на модерацию"/>
+                <input class="button button_cancel controls__button" type="reset" value="Отмена"/>
+              </div>
+              <div class="controls__right">
+                <input class="button button_save" type="button" disabled="disabled" value="Сохранить в мои черновики"/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="./assets/scripts/main.js"></script>
+  </body>
+</html>

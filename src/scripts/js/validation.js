@@ -3,6 +3,17 @@ export default function () {
     var form = document.querySelector(".main__form");
     var inputs = document.querySelectorAll(".input__line");
 
+    var phone = form["phone"].value;
+    var email = form["email"].value;
+    var workGroupDesc = form["workGroupDesc"].value;
+    var publicGroupDesc = form["publicGroupDesc"].value;
+    var groupName = form["groupName"].value;
+    var alias = form["alias"].value;
+    var fullName = form["fullName"].value;
+    var post = form["post"].value;
+
+    var save = document.querySelector(".button_save");
+
     for(var i = 0; i < inputs.length; i++) {
         let label = inputs[i].closest(".input");
         inputs[i].addEventListener("focus", function(e) {
@@ -13,6 +24,10 @@ export default function () {
         });
         inputs[i].addEventListener("blur", function(e) {
             label.classList.remove("input_focus");
+
+            if (phone && email && workGroupDesc && publicGroupDesc && groupName && alias && fullName && post) {
+                save.removeAttribute("disabled");
+            }
 
             notANull(e.target.value, e.target);
 
@@ -117,30 +132,15 @@ export default function () {
         }
     }
 
-    var phone = form["phone"].value;
-    var email = form["email"].value;
-    var workGroupDesc = form["workGroupDesc"].value;
-    var publicGroupDesc = form["publicGroupDesc"].value;
-    var groupName = form["groupName"].value;
-    var alias = form["alias"].value;
-    var fullName = form["fullName"].value;
-    var post = form["post"].value;
-    
-    var save = document.querySelector(".button_save")
-    
-    if (phone && email && workGroupDesc && publicGroupDesc && groupName && alias && fullName && post) {
-        save.removeAttribute("disabled");
-    }
-
     if (localStorage.getItem("phone")) {
-        phone = localStorage.getItem("phone")
-        email = localStorage.getItem("email")
-        workGroupDesc = localStorage.getItem("workGroupDesc")
-        publicGroupDesc = localStorage.getItem("publicGroupDesc")
-        groupName = localStorage.getItem("groupName")
-        alias = localStorage.getItem("alias")
-        fullName = localStorage.getItem("fullName")
-        post = localStorage.getItem("post")
+        phone = localStorage.getItem("phone");
+        email = localStorage.getItem("email");
+        workGroupDesc = localStorage.getItem("workGroupDesc");
+        publicGroupDesc = localStorage.getItem("publicGroupDesc");
+        groupName = localStorage.getItem("groupName");
+        alias = localStorage.getItem("alias");
+        fullName = localStorage.getItem("fullName");
+        post = localStorage.getItem("post");
     }
 
     save.addEventListener("click", function(e) {
