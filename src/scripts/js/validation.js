@@ -23,7 +23,7 @@ export default function () {
         if (phone || email || workGroupDesc || publicGroupDesc || groupName || alias || fullName || post) {
             save.removeAttribute("disabled");
         }
-        if (phone && email && workGroupDesc && publicGroupDesc && groupName && alias && fullName && post) {
+        if (phone && email && workGroupDesc && groupName && alias && fullName && post) {
             send.removeAttribute("disabled");
         }
     }, 500);
@@ -54,10 +54,18 @@ export default function () {
                 save.setAttribute("disabled", "disabled");
             }
 
-            if (phone && email && workGroupDesc && publicGroupDesc && groupName && alias && fullName && post) {
+            if (phone && email && workGroupDesc && groupName && alias && fullName && post) {
                 send.removeAttribute("disabled");
             }else {
                 send.setAttribute("disabled", "disabled");
+            }
+
+            if (checkbox.checked) {
+                if (publicGroupDesc) {
+                    send.removeAttribute("disabled");
+                }else {
+                    send.setAttribute("disabled", "disabled");
+                }
             }
 
             notANull(e.target.value, e.target);
@@ -181,6 +189,12 @@ export default function () {
         console.log("hello");
         if (checkbox.checked) {
             textarea2.classList.add("input_show");
+            if (publicGroupDesc) {
+                send.removeAttribute("disabled");
+            }else {
+                send.setAttribute("disabled", "disabled");
+            }
+
         }else {
             textarea2.classList.remove("input_show");
         }
