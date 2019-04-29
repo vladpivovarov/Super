@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da05957a-6d4c-474a-b8fa-e0d61e8f7f2c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/scripts/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/assets/style/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/assets/style/main.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/js/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/js/validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/blocks/main.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/blocks/main.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/pages/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/pages/index.pug" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/style/blocks/main.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+            <state relative-caret-position="128">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -220,12 +213,12 @@
       <updated>1556312759236</updated>
       <workItem from="1556312763935" duration="575000" />
       <workItem from="1556313375054" duration="2612000" />
-      <workItem from="1556360473626" duration="37100000" />
+      <workItem from="1556360473626" duration="37355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40287000" />
+    <option name="totallyTimeSpent" value="40542000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -508,8 +501,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/style/blocks/main.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        <state relative-caret-position="128">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
