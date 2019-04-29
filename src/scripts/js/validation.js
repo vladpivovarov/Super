@@ -12,8 +12,6 @@ export default function () {
     var fullName = form["fullName"].value;
     var post = form["post"].value;
 
-
-
     var save = document.querySelector(".button_save");
 
     for(var i = 0; i < inputs.length; i++) {
@@ -31,7 +29,7 @@ export default function () {
             email = form["email"].value;
             workGroupDesc = form["workGroupDesc"].value;
             publicGroupDesc = form["publicGroupDesc"].value;
-            groupName = form["groupName"];
+            groupName = form["groupName"].value;
             alias = form["alias"].value;
             fullName = form["fullName"].value;
             post = form["post"].value;
