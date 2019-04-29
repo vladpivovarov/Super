@@ -1,0 +1,73 @@
+extends ../template.pug
+
+block title
+    | Super
+
+block content
+    header.header
+        .container.header__container
+            h1.title.header__title Профиль рабочей группы
+            p.header__description
+                | В данном разделе вы можете посмотреть и отредактировать информацию по своей рабочей группе, настроить права участников, расшарить настройки полностью или частично для других рабочих групп, а также сделать полную копию вашей рабочей группы с ограниченным доступом для тонкой настройки без публичных оповещений.
+
+    main.main
+        .container.main__container
+            h2.subtitle.main__subtitle Основная информация
+            //.alert.main__alert
+            //    .alert__text
+            //        .alert__title Внимание!
+            //        .alert__desc Ваши данные сохранены в браузере, но не отправлены на сервер. Нажмите кнопку “Отправить”, чтобы завершить редактирование.
+            //    .alert__icon
+            //        svg.alert__svg
+            //            use(xlink:href="./assets/images/sprite.svg#svg--warn")
+
+
+            form(id="form").main__form
+                label.input.main__input
+                    .input__title Название группы
+                    input(type="text" placeholder="Введите название группы" name="groupName").input__line
+                    .input__mess Алиас не может содержать русские буквы и пробелы
+                label.input.main__input
+                    .input__title Алиас
+                    input(type="text" placeholder="Введите алиас" name="alias").input__line
+                    .input__mess
+                label.input.main__input
+                    .input__title Электронная почта для обращений
+                    input(type="text" placeholder="Введите электронную почту" name="email").input__line
+                    .input__mess
+                label.input.main__input
+                    .input__title Телефон представителя
+                    input(type="text" placeholder="+7 (XXX) XXX-XX-XX" name="phone").input__line
+                    .input__mess
+                label.input.main__input
+                    .input__title ФИО представителя
+                    input(type="text" placeholder="Введите полные данные представителя" name="fullName").input__line
+                    .input__mess
+                label.input.main__input
+                    .input__title Должность ответственного
+                    input(type="text" placeholder="Введите полное наименование должности" name="post").input__line
+                    .input__mess
+                label.input.main__input.input_textarea
+                    .input__title Описание рабочей группы для внутреннего использования
+                    textarea(placeholder="Введите краткое и емкое описание" name="workGroupDesc").input__line.input__area
+                    .input__mess
+                label.checkbox.main__checkbox
+                    input(type="checkbox" name="groupName").checkbox__input
+                    .checkbox__block
+                        svg
+                            use(xlink:href="./assets/images/sprite.svg#svg--check")
+                    .checkbox__desc Публичное описание отличается от внутреннего
+                label.input.main__input.input__checked.input__hide.input_textarea
+                    .input__title Публичное описание рабочей группы
+                    textarea(placeholder="Введите краткое и емкое описание" name="publicGroupDesc").input__line.input__area
+                    .input__mess
+                .controls.main__controls
+                    .controls__left
+                        input(type="submit" value="Отправить на модерацию").button.button_submit.controls__button
+                        input(type="reset" value="Отмена").button.button_cancel.controls__button
+                    .controls__right
+                        input(type="button" disabled="disabled" value="Сохранить в мои черновики").button.button_save
+
+
+
+

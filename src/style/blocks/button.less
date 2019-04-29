@@ -1,0 +1,67 @@
+.button {
+  display: inline-block;
+  height: 45px;
+  padding: 0px 20px 0px 20px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  font-family: Ubuntu, Calibri, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 45px;
+  color: #FFFFFF;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.button_submit {
+  background: #2F80ED;
+  color: #FFFFFF;
+  &:hover {
+    background: #2974D9;
+  }
+  &:focus {
+    background: #2F80ED;
+    box-shadow: 0px 0px 0px 2px rgba(47, 128, 237, 0.5);
+  }
+  &:active {
+    background: #236ACB;
+  }
+  &:disabled {
+    background: #90B2E3;
+  }
+}
+
+.button_cancel {
+  background: #E9E9E9;
+  color: #333333;
+  &:hover {
+    background: #DBDBDB;
+  }
+  &:focus {
+    background: #E9E9E9;
+    box-shadow: 0px 0px 0px 2px #DBDBDB;
+  }
+  &:active {
+    background: #C4C4C4;
+  }
+}
+
+.button_save {
+  background: #E9E9E9;
+  color: rgba(#333333);
+  &:hover {
+    background: #DBDBDB;
+  }
+  &:focus {
+    background: #E9E9E9;
+    box-shadow: 0px 0px 0px 2px #DBDBDB;
+  }
+  &:active {
+    background: #C4C4C4;
+  }
+  &:disabled {
+    background: #E1E1E1;
+    color: #999999;
+  }
+}

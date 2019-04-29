@@ -1,0 +1,28 @@
+.header__container {
+  padding-top: 80px;
+}
+
+.header__title {
+  margin-bottom: 20px;
+}
+
+.header__description {
+  position: relative;
+  font-family: Ubuntu, Calibri, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    left: -16px - 4px;
+    top: 8px;
+    transform: translate(0% -50%);
+    background: #F19932;
+    border-radius: 2px;
+  }
+}
