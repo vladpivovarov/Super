@@ -22,7 +22,6 @@ export default function () {
 
         if (phone || email || workGroupDesc || publicGroupDesc || groupName || alias || fullName || post) {
             save.removeAttribute("disabled");
-            console.log("helo");
         }
         if (phone && email && workGroupDesc && publicGroupDesc && groupName && alias && fullName && post) {
             send.removeAttribute("disabled");
@@ -84,9 +83,6 @@ export default function () {
                 }else {
                     label.classList.remove("input_alert");
                 };
-            }
-            if(e.target.name === "phone") {
-
             }
         });
     }
