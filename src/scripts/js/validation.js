@@ -2,19 +2,32 @@ export default function () {
 
     var form = document.getElementById("form");
     var inputs = document.querySelectorAll(".input__line");
-    var phone = form["phone"].value;
-    var email = form["email"].value;
-    var workGroupDesc = form["workGroupDesc"].value;
-    var publicGroupDesc = form["publicGroupDesc"].value;
-    var groupName = form["groupName"].value;
-    var alias = form["alias"].value;
-    var fullName = form["fullName"].value;
-    var post = form["post"].value;
     var alert = document.querySelector(".main__alert");
     var subtitle = document.querySelector(".main__subtitle");
     var checkbox = document.querySelector(".checkbox__input");
     var textarea2 = document.getElementById("textarea2");
     var save = document.querySelector(".button_save");
+    var send = document.querySelector(".button_submit");
+    var phone, email, workGroupDesc, publicGroupDesc, groupName, alias, fullName, post;
+
+    setTimeout(function(){
+        phone = form["phone"].value;
+        email = form["email"].value;
+        workGroupDesc = form["workGroupDesc"].value;
+        publicGroupDesc = form["publicGroupDesc"].value;
+        groupName = form["groupName"].value;
+        alias = form["alias"].value;
+        fullName = form["fullName"].value;
+        post = form["post"].value;
+
+        if (phone || email || workGroupDesc || publicGroupDesc || groupName || alias || fullName || post) {
+            save.removeAttribute("disabled");
+            console.log("helo");
+        }
+        if (phone && email && workGroupDesc && publicGroupDesc && groupName && alias && fullName && post) {
+            send.removeAttribute("disabled");
+        }
+    }, 500);
 
     for(var i = 0; i < inputs.length; i++) {
         let label = inputs[i].closest(".input");
@@ -38,6 +51,14 @@ export default function () {
 
             if (phone || email || workGroupDesc || publicGroupDesc || groupName || alias || fullName || post) {
                 save.removeAttribute("disabled");
+            }else {
+                save.setAttribute("disabled", "disabled");
+            }
+
+            if (phone && email && workGroupDesc && publicGroupDesc && groupName && alias && fullName && post) {
+                send.removeAttribute("disabled");
+            }else {
+                send.setAttribute("disabled", "disabled");
             }
 
             notANull(e.target.value, e.target);

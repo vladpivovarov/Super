@@ -5,7 +5,7 @@ import "./js/style";
 import validation from "./js/validation";
 import ajax from "./js/ajax";
 
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", function() {
     validation();
     ajax();
 });

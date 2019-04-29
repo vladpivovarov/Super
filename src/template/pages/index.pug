@@ -9,7 +9,6 @@ block content
             h1.title.header__title Профиль рабочей группы
             p.header__description
                 | В данном разделе вы можете посмотреть и отредактировать информацию по своей рабочей группе, настроить права участников, расшарить настройки полностью или частично для других рабочих групп, а также сделать полную копию вашей рабочей группы с ограниченным доступом для тонкой настройки без публичных оповещений.
-
     main.main
         .container.main__container
             h2.subtitle.main__subtitle Основная информация
@@ -20,8 +19,6 @@ block content
                 .alert__icon
                     svg.alert__svg
                         use(xlink:href="./assets/images/sprite.svg#svg--warn")
-
-
             form(id="form").main__form
                 label.input.main__input
                     .input__title Название группы
@@ -63,7 +60,7 @@ block content
                     .input__mess
                 .controls.main__controls
                     .controls__left
-                        input(type="submit" value="Отправить на модерацию").button.button_submit.controls__button
+                        input(type="submit" value="Отправить на модерацию" disabled="disabled").button.button_submit.controls__button
                         input(type="reset" value="Отмена").button.button_cancel.controls__button
                     .controls__right
                         input(type="button" disabled="disabled" value="Сохранить в мои черновики").button.button_save
