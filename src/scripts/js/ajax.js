@@ -1,7 +1,6 @@
 export default function () {
 
     var form = document.getElementById("form");
-    var inputs = document.querySelectorAll(".input__line");
 
     var phone = form["phone"];
     var email = form["email"];
@@ -15,7 +14,6 @@ export default function () {
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
-
 
         if (phone.value && email.value && workGroupDesc.value && groupName.value && alias.value && fullName.value && post.value) {
             if (!phone.classList.contains("input_alert") &&
@@ -56,7 +54,5 @@ export default function () {
                 return false;
             }
         }
-
     });
-
 }

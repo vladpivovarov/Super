@@ -2,7 +2,6 @@ export default function () {
 
     var form = document.getElementById("form");
     var inputs = document.querySelectorAll(".input__line");
-
     var phone = form["phone"].value;
     var email = form["email"].value;
     var workGroupDesc = form["workGroupDesc"].value;
@@ -13,7 +12,8 @@ export default function () {
     var post = form["post"].value;
     var alert = document.querySelector(".main__alert");
     var subtitle = document.querySelector(".main__subtitle");
-
+    var checkbox = document.querySelector(".checkbox__input");
+    var textarea2 = document.getElementById("textarea2");
     var save = document.querySelector(".button_save");
 
     for(var i = 0; i < inputs.length; i++) {
@@ -70,7 +70,6 @@ export default function () {
         });
     }
 
-
     function notANull(value, thisInput) {
         var mess = thisInput.nextElementSibling;
         var labels = thisInput.closest("label");
@@ -82,7 +81,6 @@ export default function () {
             mess.textContent = "";
         }
     }
-
 
     var phoneInput = form['phone'];
     phoneInput.addEventListener('keydown', function(event) {
@@ -110,7 +108,6 @@ export default function () {
         }
     });
 
-
     function validateEmail(input) {
         var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
         var address = input.value;
@@ -119,15 +116,6 @@ export default function () {
             return "false";
         }else {
             return "true";
-        }
-    }
-
-    function validate(form_id,email) {
-        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-        var address = document.forms[form_id].elements[email].value;
-        if(reg.test(address) == false) {
-            alert('Введите корректный e-mail');
-            return false;
         }
     }
 
@@ -157,7 +145,6 @@ export default function () {
     form["fullName"].value = localStorage.getItem("fullName");
     form["post"].value = localStorage.getItem("post");
 
-
     save.addEventListener("click", function(e) {
         if(save.hasAttribute("disabled")) {
             return;
@@ -172,10 +159,6 @@ export default function () {
             localStorage.setItem("post", post);
             localStorage.setItem("count", "1");
     });
-
-
-    var checkbox = document.querySelector(".checkbox__input");
-    var textarea2 = document.getElementById("textarea2");
 
     checkbox.onchange = function() {
         console.log("hello");
